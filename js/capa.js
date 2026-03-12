@@ -53,5 +53,5 @@ botoesRota.forEach(botao => {
 
 // 3. ABERTURA DO QUIZ
 btnQuiz.addEventListener('click', () => {
-  window.location.href = 'quiz.html';
+  window.location.href = './html/quiz.html';
 });
