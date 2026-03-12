@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoMapa - Cidades Inteligentes</title>
+  
+  <link rel="stylesheet" href="../css/capa.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header-principal">
+    <div class="logo-container">
+      <span class="logo-icone">🌱</span>
+      <h1 class="logo-texto">EcoMapa</h1>
+    </div>
+    
+    <div class="busca-container">
+      <input type="text" id="campo-busca" class="input-busca" placeholder="Buscar ecoponto ou bairro...">
+      <button class="btn-busca" aria-label="Buscar">🔍</button>
+    </div>
+  </header>
+
+  <main class="conteudo-principal">
+    
+    <div class="titulo-secao">
+      <h2>Pontos de Coleta Próximos</h2>
+      <p>Encontre o local ideal para cuidar da nossa cidade.</p>
+    </div>
+
+    <div class="banner-quiz">
+      <div class="texto-quiz">
+        <h3>Quer aprender a separar o lixo brincando? 🎮</h3>
+        <p>Faça nosso quiz rápido e descubra se você é um expert da sustentabilidade!</p>
+      </div>
+      <button class="btn-quiz" id="btn-abrir-quiz">Jogar Quiz</button>
+    </div>
+
+    <section class="filtros">
+      <button class="btn-filtro ativo" data-filter="todos">Todos</button>
+      <button class="btn-filtro" data-filter="eletronico">🔋 Eletrônicos</button>
+      <button class="btn-filtro" data-filter="papel">📦 Papel e Papelão</button>
+      <button class="btn-filtro" data-filter="plastico">🧴 Plástico</button>
+      <button class="btn-filtro" data-filter="vidro">🟢 Vidro</button>
+      <button class="btn-filtro" data-filter="oleo">🛢️ Óleo</button>
+    </section>
+
+    <section class="grid-ecopontos" id="lista-cards">
+      
+      <div class="card-ecoponto" data-categorias="plastico papel eletronico" data-lat="-23.4312" data-lng="-47.4123">
+        <div class="card-header">
+          <h3 class="nome-ecoponto">Ecoponto Éden</h3>
+          <span class="status aberto">Aberto</span>
+        </div>
+        <p class="distancia">📍 a 2.3 km de distância</p>
+        <div class="materiais">
+          <span class="tag plastico">Plástico</span>
+          <span class="tag papel">Papel/Papelão</span>
+          <span class="tag eletronico">Eletrônicos</span>
+        </div>
+        <button class="btn-rota">Traçar Rota</button>
+      </div>
+
+      <div class="card-ecoponto" data-categorias="vidro metal" data-lat="-23.5354" data-lng="-47.4645">
+        <div class="card-header">
+          <h3 class="nome-ecoponto">Ecoponto Campolim</h3>
+          <span class="status fechado">Fechado</span>
+        </div>
+        <p class="distancia">📍 a 5.1 km de distância</p>
+        <div class="materiais">
+          <span class="tag vidro">Vidro</span>
+          <span class="tag metal">Metal</span>
+        </div>
+        <button class="btn-rota">Traçar Rota</button>
+      </div>
+
+      <div class="card-ecoponto" data-categorias="plastico metal oleo" data-lat="-23.5342" data-lng="-47.2608">
+        <div class="card-header">
+          <h3 class="nome-ecoponto">Coleta Central</h3>
+          <span class="status aberto">Aberto</span>
+        </div>
+        <p class="distancia">📍 a 12.4 km de distância</p>
+        <div class="materiais">
+          <span class="tag plastico">Plástico</span>
+          <span class="tag metal">Metal</span>
+          <span class="tag oleo">Óleo</span>
+        </div>
+        <button class="btn-rota">Traçar Rota</button>
+      </div>
+
+    </section>
+  </main>
+
+  <script src="../js/capa.js"></script>
+</body>
+</html>
