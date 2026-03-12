@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Sustentável - EcoMapa</title>
+  
+  <link rel="stylesheet" href="../css/quiz.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="quiz-container">
+    
+    <div id="tela-inicio" class="tela-quiz">
+      <div class="icone-gigante">🌍✨</div>
+      <h2>Você é um expert em reciclagem?</h2>
+      <p>Teste seus conhecimentos sobre o descarte correto de resíduos e ajude a nossa cidade a ficar mais limpa!</p>
+      <button id="btn-comecar" class="btn-primario">Começar o Quiz</button>
+      <a href="index.html" class="link-voltar">Voltar para o Mapa</a>
+    </div>
+
+    <div id="tela-pergunta" class="tela-quiz escondido">
+      
+      <div class="cabecalho-pergunta">
+        <span id="contador-pergunta">Pergunta 1 de 5</span>
+      </div>
+      
+      <div class="imagem-container">
+        <img id="imagem-pergunta" src="" alt="Imagem da pergunta" class="escondido">
+      </div>
+      
+      <h3 id="texto-pergunta">Aqui vai aparecer a pergunta?</h3>
+      
+      <div id="opcoes-container" class="opcoes-grid">
+        </div>
+
+      <div id="feedback-container" class="feedback-box escondido">
+        <h4 id="feedback-titulo">Correto!</h4>
+        <p id="feedback-explicacao">Explicação vai aqui.</p>
+        <button id="btn-proxima" class="btn-primario">Próxima Pergunta ➔</button>
+      </div>
+
+    </div>
+
+    <div id="tela-resultado" class="tela-quiz escondido">
+      <div class="icone-gigante" id="icone-resultado">🏆</div>
+      <h2 id="titulo-resultado">Fim de Jogo!</h2>
+      <p>Você acertou <strong id="pontuacao-final">0</strong> de <strong id="total-perguntas">0</strong> perguntas.</p>
+      
+      <div class="caixa-resultado">
+        <p id="mensagem-resultado">Mensagem de feedback aqui.</p>
+      </div>
+      
+      <button id="btn-reiniciar" class="btn-primario">Jogar Novamente</button>
+      <a href="index.html" class="btn-secundario">Voltar para o Mapa</a>
+    </div>
+
+  </div>
+
+  <script src="../js/quiz.js"></script>
+</body>
+</html>
