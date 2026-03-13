@@ -6,16 +6,15 @@ const btnQuiz = document.getElementById('btn-abrir-quiz');
 
 let filtroAtual = 'todos';
 
-// 1. SISTEMA DE FILTRO E BUSCA
 function atualizarCards() {
   const textoBusca = campoBusca.value.toLowerCase();
 
   cardsEcoponto.forEach(card => {
-    const categoriasDoCard = card.getAttribute('data-categorias');
+    const categoriasDoCard = card.getAttribute('data-categorias') || "";
     const passaFiltro = (filtroAtual === 'todos' || categoriasDoCard.includes(filtroAtual));
 
-    const nomeEcoponto = card.querySelector('.nome-ecoponto').textContent.toLowerCase();
-    const passaBusca = nomeEcoponto.includes(textoBusca);
+    const conteudoCard = card.textContent.toLowerCase();
+    const passaBusca = conteudoCard.includes(textoBusca);
 
     if (passaFiltro && passaBusca) {
       card.classList.remove('escondido');
@@ -34,24 +33,28 @@ botoesFiltro.forEach(botao => {
   });
 });
 
-campoBusca.addEventListener('input', () => {
-  atualizarCards();
-});
+campoBusca.addEventListener('input', atualizarCards);
 
-// 2. SISTEMA DE ROTAS COM WAZE
 botoesRota.forEach(botao => {
   botao.addEventListener('click', (evento) => {
     const card = evento.target.closest('.card-ecoponto');
     const lat = card.getAttribute('data-lat');
     const lng = card.getAttribute('data-lng');
-    
-    // Abre o link direto do Waze passando latitude e longitude
-    const urlWaze = `https://waze.com/ul?ll=${lat},${lng}&navigate=yes`;
-    window.open(urlWaze, '_blank');
+    let urlMaps = "";
+
+    if (lat && lng) {
+      // Link direto por coordenadas
+      urlMaps = `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`;
+    } else {
+      // Busca por texto
+      const enderecoTexto = card.querySelector('.endereco').textContent.replace('📍', '').trim();
+      const cidadeTexto = card.querySelector('.status').textContent.trim();
+      urlMaps = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(enderecoTexto + ', ' + cidadeTexto)}`;
+    }
+    window.open(urlMaps, '_blank');
   });
 });
 
-// 3. ABERTURA DO QUIZ
 btnQuiz.addEventListener('click', () => {
-  window.location.href = './html/quiz.html';
+  window.location.href = 'quiz.html';
 });

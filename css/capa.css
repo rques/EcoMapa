@@ -201,12 +201,14 @@ body {
 .status.aberto { background-color: #D1FAE5; color: #059669; }
 .status.fechado { background-color: #FEE2E2; color: #DC2626; }
 
-.distancia {
-  color: #64748B;
+/* --- ATUALIZAÇÃO: ENDEREÇOS E NOVAS TAGS --- */
+.endereco {
+  color: #475569;
   font-size: 0.95rem;
   font-weight: 600;
   margin-top: 0;
   margin-bottom: 16px;
+  line-height: 1.4;
 }
 
 .materiais {
@@ -222,6 +224,7 @@ body {
   padding: 6px 12px;
   border-radius: 10px;
 }
+
 .tag.plastico { background-color: #FEE2E2; color: #DC2626; }
 .tag.papel { background-color: #DBEAFE; color: #2563EB; }
 .tag.eletronico { background-color: #FEF3C7; color: #D97706; }
@@ -229,7 +232,11 @@ body {
 .tag.metal { background-color: #F3E8FF; color: #9333EA; }
 .tag.oleo { background-color: #FFEDD5; color: #C2410C; }
 
-/* BOTÃO DE ROTA WAZE */
+/* Novas Tags */
+.tag.entulho { background-color: #F1F5F9; color: #475569; border: 1px solid #CBD5E1; }
+.tag.moveis { background-color: #FFEDD5; color: #9A3412; border: 1px solid #FDBA74; }
+
+/* BOTÃO DE ROTA MAPS */
 .btn-rota {
   width: 100%;
   background-color: #10B981;
