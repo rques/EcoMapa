@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoMapa - Cidades Inteligentes</title> 
+  <link rel="stylesheet" href="./css/capa.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header-principal">
+    <div class="logo-container">
+      <span class="logo-icone">🌱</span>
+      <h1 class="logo-texto">EcoMapa</h1>
+    </div>
+    
+    <div class="busca-container">
+      <input type="text" id="campo-busca" class="input-busca" placeholder="Buscar por nome, rua ou cidade...">
+      <button class="btn-busca" aria-label="Buscar">🔍</button>
+    </div>
+  </header>
+
+  <main class="conteudo-principal">
+    
+    <div class="titulo-secao">
+      <h2>Pontos de Coleta na Região</h2>
+      <p>Encontre o local ideal para cuidar da nossa cidade.</p>
+    </div>
+
+    <div class="banner-quiz">
+      <div class="texto-quiz">
+        <h3>Quer aprender a separar o lixo brincando? 🎮</h3>
+        <p>Faça nosso quiz rápido e descubra se você é um expert da sustentabilidade!</p>
+      </div>
+      <button class="btn-quiz" id="btn-abrir-quiz">Jogar Quiz</button>
+    </div>
+
+    <section class="filtros">
+      <button class="btn-filtro ativo" data-filter="todos">Todos</button>
+      <button class="btn-filtro" data-filter="papel">📦 Recicláveis</button>
+      <button class="btn-filtro" data-filter="eletronico">🔋 Eletrônicos</button>
+      <button class="btn-filtro" data-filter="oleo">🛢️ Óleo</button>
+      <button class="btn-filtro" data-filter="entulho">🧱 Entulho</button>
+      <button class="btn-filtro" data-filter="moveis">🛋️ Móveis</button>
+    </section>
+
+    <section class="grid-ecopontos" id="lista-cards">
+      
+      <div class="card-ecoponto" data-categorias="entulho moveis" data-lat="-23.4562" data-lng="-47.4851">
+        <div class="card-header"><h3>Ecoponto Vila Helena</h3><span class="status aberto">Sorocaba</span></div>
+        <p class="endereco">📍 Rua Roque Sampaio, 100</p>
+        <div class="materiais"><span class="tag entulho">Entulho</span><span class="tag moveis">Móveis e Volumosos</span></div>
+        <button class="btn-rota">Traçar Rota</button>
+      </div>
+
+      <div class="card-ecoponto" data-categorias="entulho moveis" data-lat="-23.4448" data-lng="-47.4087">
+        <div class="card-header"><h3>Ecoponto Cajuru</h3><span class="status aberto">Sorocaba</span></div>
+        <p class="endereco">📍 Rua Mário Monteiro de Carvalho, s/n</p>
+        <div class="materiais"><span class="tag entulho">Entulho</span><span class="tag moveis">Móveis e Volumosos</span></div>
+        <button class="btn-rota">Traçar Rota</button>
+      </div>
+
+      <div class="card-ecoponto" data-categorias="entulho moveis" data-lat="-23.5186" data-lng="-47.4988">
+        <div class="card-header"><h3>Ecoponto Júlio de Mesquita</h3><span class="status aberto">Sorocaba</span></div>
+        <p class="endereco">📍 Av. Domingues Martins, s/n</p>
+        <div class="materiais"><span class="tag entulho">Entulho</span><span class="tag moveis">Móveis e Volumosos</span></div>
+        <button class="btn-rota">Traçar Rota</button>
+      </div>
+
+      <div class="card-ecoponto" data-categorias="entulho moveis" data-lat="-23.4901" data-lng="-47.4200">
+        <div class="card-header"><h3>Ecoponto Vila Isabel</h3><span class="status aberto">Sorocaba</span></div>
+        <p class="endereco">📍 Rua Lourenço Molinero, 200</p>
+        <div class="materiais"><span class="tag entulho">Entulho</span><span class="tag moveis">Móveis e Volumosos</span></div>
+        <button class="btn-rota">Traçar Rota</button>
+      </div>
+
+      <div class="card-ecoponto" data-categorias="entulho moveis" data-lat="-23.5072" data-lng="-47.3768">
+        <div class="card-header"><h3>Ecoponto Brigadeiro Tobias</h3><span class="status aberto">Sorocaba</span></div>
+        <p class="endereco">📍 Rua José Sarti, 636</p>
+        <div class="materiais"><span class="tag entulho">Entulho</span><span class="tag moveis">Móveis e Volumosos</span></div>
+        <button class="btn-rota">Traçar Rota</button>
+      </div>
+
+      <div class="card-ecoponto" data-categorias="entulho moveis" data-lat="-23.4320" data-lng="-47.4650">
+        <div class="card-header"><h3>Ecoponto Vitória Régia</h3><span class="status aberto">Sorocaba</span></div>
+        <p class="endereco">📍 Rua Aparecida Levy, próx. ao nº 53</p>
+        <div class="materiais"><span class="tag entulho">Entulho</span><span class="tag moveis">Móveis e Volumosos</span></div>
+        <button class="btn-rota">Traçar Rota</button>
+      </div>
+
+      <div class="card-ecoponto" data-categorias="papel plastico vidro metal oleo" data-lat="-23.5045" data-lng="-47.4367">
+        <div class="card-header"><h3>CORESO - Vila Colorau</h3><span class="status aberto">Sorocaba</span></div>
+        <p class="endereco">📍 Rua Encarnação Rando Castelucci, 70</p>
+        <div class="materiais"><span class="tag papel">Papel</span><span class="tag plastico">Plástico</span><span class="tag vidro">Vidro</span><span class="tag metal">Metal</span></div>
+        <button class="btn-rota">Traçar Rota</button>
+      </div>
+
+      <div class="card-ecoponto" data-categorias="papel plastico vidro metal" data-lat="-23.4345" data-lng="-47.4632">
+        <div class="card-header"><h3>CORESO - Vitória Régia</h3><span class="status aberto">Sorocaba</span></div>
+        <p class="endereco">📍 Rua José Henrique Dias, 215</p>
+        <div class="materiais"><span class="tag papel">Papel</span><span class="tag plastico">Plástico</span><span class="tag vidro">Vidro</span><span class="tag metal">Metal</span></div>
+        <button class="btn-rota">Traçar Rota</button>
+      </div>
+
+      <div class="card-ecoponto" data-categorias="papel plastico vidro metal" data-lat="-23.4830" data-lng="-47.4285">
+        <div class="card-header"><h3>COOPERESO - Jd. Leocádia</h3><span class="status aberto">Sorocaba</span></div>
+        <p class="endereco">📍 Rua Ourinhos, 241</p>
+        <div class="materiais"><span class="tag papel">Papel</span><span class="tag plastico">Plástico</span><span class="tag vidro">Vidro</span><span class="tag metal">Metal</span></div>
+        <button class="btn-rota">Traçar Rota</button>
+      </div>
+
+      <div class="card-ecoponto" data-categorias="papel plastico vidro metal" data-lat="-23.5100" data-lng="-47.4820">
+        <div class="card-header"><h3>COOPERESO - Jd. Zulmira</h3><span class="status aberto">Sorocaba</span></div>
+        <p class="endereco">📍 Rua Benedito Ferreira da Silva, 266</p>
+        <div class="materiais"><span class="tag papel">Papel</span><span class="tag plastico">Plástico</span><span class="tag vidro">Vidro</span><span class="tag metal">Metal</span></div>
+        <button class="btn-rota">Traçar Rota</button>
+      </div>
+
+      <div class="card-ecoponto" data-categorias="eletronico" data-lat="-23.4674" data-lng="-47.4257">
+        <div class="card-header"><h3>Facens (Green Eletron)</h3><span class="status aberto">Sorocaba</span></div>
+        <p class="endereco">📍 Rod. Sen. José Ermírio de Moraes, 1425</p>
+        <div class="materiais"><span class="tag eletronico">Eletrônicos</span></div>
+        <button class="btn-rota">Traçar Rota</button>
+      </div>
+
+      <div class="card-ecoponto" data-categorias="eletronico" data-lat="-23.5158" data-lng="-47.4584">
+        <div class="card-header"><h3>Sesc Sorocaba</h3><span class="status aberto">Sorocaba</span></div>
+        <p class="endereco">📍 Rua Barão de Piratininga, 555</p>
+        <div class="materiais"><span class="tag eletronico">Eletrônicos</span></div>
+        <button class="btn-rota">Traçar Rota</button>
+      </div>
+
+      <div class="card-ecoponto" data-categorias="eletronico" data-lat="-23.5118" data-lng="-47.4437">
+        <div class="card-header"><h3>Senac Sorocaba</h3><span class="status aberto">Sorocaba</span></div>
+        <p class="endereco">📍 Rua Cel. Nogueira Padilha, 2392</p>
+        <div class="materiais"><span class="tag eletronico">Eletrônicos</span></div>
+        <button class="btn-rota">Traçar Rota</button>
+      </div>
+
+      <div class="card-ecoponto" data-categorias="eletronico">
+        <div class="card-header"><h3>Supermercados (Green Eletron)</h3><span class="status aberto">Sorocaba</span></div>
+        <p class="endereco">📍 Carrefour, Coop (Itavuvu) e Makro</p>
+        <div class="materiais"><span class="tag eletronico">Eletrônicos</span></div>
+        <button class="btn-rota">Traçar Rota</button>
+      </div>
+
+      <div class="card-ecoponto" data-categorias="eletronico">
+        <div class="card-header"><h3>Lojas Parceiras (Green Eletron)</h3><span class="status aberto">Sorocaba</span></div>
+        <p class="endereco">📍 Kalunga, Leroy Merlin e Casas Bahia</p>
+        <div class="materiais"><span class="tag eletronico">Eletrônicos</span></div>
+        <button class="btn-rota">Traçar Rota</button>
+      </div>
+
+      <div class="card-ecoponto" data-categorias="papel plastico vidro metal oleo eletronico" data-lat="-23.5412" data-lng="-47.4395">
+        <div class="card-header"><h3>COOPERVOT</h3><span class="status aberto">Votorantim</span></div>
+        <p class="endereco">📍 Av. Jaziel de Azevedo Ribeiro, 680</p>
+        <div class="materiais"><span class="tag papel">Recicláveis</span><span class="tag oleo">Óleo</span><span class="tag eletronico">Eletrônicos</span></div>
+        <button class="btn-rota">Traçar Rota</button>
+      </div>
+
+      <div class="card-ecoponto" data-categorias="entulho moveis" data-lat="-23.5480" data-lng="-47.4450">
+        <div class="card-header"><h3>Ecoponto Vila Nova</h3><span class="status aberto">Votorantim</span></div>
+        <p class="endereco">📍 Vila Nova Votorantim</p>
+        <div class="materiais"><span class="tag entulho">Entulho</span><span class="tag moveis">Volumosos</span></div>
+        <button class="btn-rota">Traçar Rota</button>
+      </div>
+
+      <div class="card-ecoponto" data-categorias="eletronico">
+        <div class="card-header"><h3>Pontos de Pilhas e Baterias</h3><span class="status aberto">Votorantim</span></div>
+        <p class="endereco">📍 27 pontos em escolas e prédios públicos</p>
+        <div class="materiais"><span class="tag eletronico">Pilhas e Baterias</span></div>
+        <button class="btn-rota">Traçar Rota</button>
+      </div>
+
+      <div class="card-ecoponto" data-categorias="papel plastico vidro metal">
+        <div class="card-header"><h3>Coleta Seletiva Porta a Porta</h3><span class="status aberto">Votorantim</span></div>
+        <p class="endereco">📍 Pq. Bela Vista, Rio Acima, Jd. Clarice</p>
+        <div class="materiais"><span class="tag papel">Recicláveis</span></div>
+        <button class="btn-rota">Traçar Rota</button>
+      </div>
+
+      <div class="card-ecoponto" data-categorias="papel plastico vidro metal">
+        <div class="card-header"><h3>Cooperativa de Reciclagem</h3><span class="status aberto">Alumínio</span></div>
+        <p class="endereco">📍 Coleta Seletiva Municipal</p>
+        <div class="materiais"><span class="tag papel">Recicláveis</span><span class="tag metal">Alumínio e Metais</span></div>
+        <button class="btn-rota">Traçar Rota</button>
+      </div>
+
+      <div class="card-ecoponto" data-categorias="papel plastico metal vidro" data-lat="-23.2685" data-lng="-47.2965">
+        <div class="card-header"><h3>COMAREI - São Judas</h3><span class="status aberto">Itu</span></div>
+        <p class="endereco">📍 Centro de Triagem (Região Central)</p>
+        <div class="materiais"><span class="tag papel">Recicláveis</span></div>
+        <button class="btn-rota">Traçar Rota</button>
+      </div>
+
+      <div class="card-ecoponto" data-categorias="papel plastico metal vidro">
+        <div class="card-header"><h3>COMAREI - Pirapitingui</h3><span class="status aberto">Itu</span></div>
+        <p class="endereco">📍 Região do Hospital e Adjacentes</p>
+        <div class="materiais"><span class="tag papel">Recicláveis</span></div>
+        <button class="btn-rota">Traçar Rota</button>
+      </div>
+
+      <div class="card-ecoponto" data-categorias="moveis papel plastico metal vidro">
+        <div class="card-header"><h3>Ecopontos Municipais</h3><span class="status aberto">Itu</span></div>
+        <p class="endereco">📍 Jd. das Rosas, Santa Rosa e Pirapitingui</p>
+        <div class="materiais"><span class="tag moveis">Móveis</span><span class="tag papel">Recicláveis</span></div>
+        <button class="btn-rota">Traçar Rota</button>
+      </div>
+
+      <div class="card-ecoponto" data-categorias="papel plastico metal vidro" data-lat="-23.5220" data-lng="-47.6150">
+        <div class="card-header"><h3>CooperIpanema</h3><span class="status aberto">Araçoiaba</span></div>
+        <p class="endereco">📍 Rua Antônio Ferraz Martins, 10</p>
+        <div class="materiais"><span class="tag papel">Recicláveis</span></div>
+        <button class="btn-rota">Traçar Rota</button>
+      </div>
+
+      <div class="card-ecoponto" data-categorias="eletronico">
+        <div class="card-header"><h3>Casa da Cultura</h3><span class="status aberto">Araçoiaba</span></div>
+        <p class="endereco">📍 Rua Pedro Nolasco, 120</p>
+        <div class="materiais"><span class="tag eletronico">Pilhas e Baterias</span></div>
+        <button class="btn-rota">Traçar Rota</button>
+      </div>
+
+      <div class="card-ecoponto" data-categorias="eletronico oleo">
+        <div class="card-header"><h3>Sec. de Meio Ambiente</h3><span class="status aberto">Araçoiaba</span></div>
+        <p class="endereco">📍 Rua Afonso Vergueiro, 16</p>
+        <div class="materiais"><span class="tag eletronico">Eletrônicos</span><span class="tag oleo">Óleo de Cozinha</span></div>
+        <button class="btn-rota">Traçar Rota</button>
+      </div>
+
+      <div class="card-ecoponto" data-categorias="papel plastico metal vidro">
+        <div class="card-header"><h3>Sec. do Meio Ambiente</h3><span class="status aberto">Salto de Pirapora</span></div>
+        <p class="endereco">📍 Av. Lidya David Haddad, 150</p>
+        <div class="materiais"><span class="tag papel">Informaçoes e Entrega</span></div>
+        <button class="btn-rota">Traçar Rota</button>
+      </div>
+
+      <div class="card-ecoponto" data-categorias="papel plastico metal vidro">
+        <div class="card-header"><h3>Coleta Seletiva</h3><span class="status aberto">Salto de Pirapora</span></div>
+        <p class="endereco">📍 Atendimento com caminhões específicos</p>
+        <div class="materiais"><span class="tag papel">Recicláveis Secos</span></div>
+        <button class="btn-rota">Traçar Rota</button>
+      </div>
+
+      <div class="card-ecoponto" data-categorias="eletronico papel plastico metal vidro" data-lat="-23.2135" data-lng="-47.5255">
+        <div class="card-header"><h3>Ecoponto Destine Aqui</h3><span class="status aberto">Porto Feliz</span></div>
+        <p class="endereco">📍 Praça Dr. José e Sacramento Silva, 20</p>
+        <div class="materiais"><span class="tag eletronico">Eletrônicos</span><span class="tag papel">Recicláveis</span></div>
+        <button class="btn-rota">Traçar Rota</button>
+      </div>
+
+      <div class="card-ecoponto" data-categorias="papel plastico metal vidro">
+        <div class="card-header"><h3>Coleta Seletiva Municipal</h3><span class="status aberto">Porto Feliz</span></div>
+        <p class="endereco">📍 Bairros centrais e periféricos</p>
+        <div class="materiais"><span class="tag papel">Recicláveis Secos</span></div>
+        <button class="btn-rota">Traçar Rota</button>
+      </div>
+
+      <div class="card-ecoponto" data-categorias="entulho">
+        <div class="card-header"><h3>EcoParque Veolia</h3><span class="status aberto">Iperó</span></div>
+        <p class="endereco">📍 Principal destino de resíduos da região</p>
+        <div class="materiais"><span class="tag entulho">Resíduos Gerais</span></div>
+        <button class="btn-rota">Traçar Rota</button>
+      </div>
+
+      <div class="card-ecoponto" data-categorias="papel plastico metal vidro">
+        <div class="card-header"><h3>Coleta Seletiva</h3><span class="status aberto">Iperó</span></div>
+        <p class="endereco">📍 Parceria com associações locais</p>
+        <div class="materiais"><span class="tag papel">Coleta Domiciliar</span></div>
+        <button class="btn-rota">Traçar Rota</button>
+      </div>
+
+      <div class="card-ecoponto" data-categorias="papel plastico metal vidro">
+        <div class="card-header"><h3>PEVs nas Escolas</h3><span class="status aberto">Mairinque</span></div>
+        <p class="endereco">📍 EM Mato Dentro e EM Jardim Vitória</p>
+        <div class="materiais"><span class="tag papel">Entrega Voluntária</span></div>
+        <button class="btn-rota">Traçar Rota</button>
+      </div>
+
+      <div class="card-ecoponto" data-categorias="moveis eletronico">
+        <div class="card-header"><h3>Operação Cata-Treco</h3><span class="status aberto">Mairinque</span></div>
+        <p class="endereco">📍 Mutirões periódicos nos bairros</p>
+        <div class="materiais"><span class="tag moveis">Móveis</span><span class="tag eletronico">Eletrônicos</span></div>
+        <button class="btn-rota">Traçar Rota</button>
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="./js/capa.js"></script>
+</body>
+</html>
