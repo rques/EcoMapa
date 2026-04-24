@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoMapa - Aprenda a Reciclar</title>
+    <link rel="stylesheet" href="../css/aprendizado.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">🌱 <span>EcoMapa</span></div>
+       
+    </header>
+
+    <main class="container">
+        <section class="hero-section">
+            <h1>Por que reciclar é importante?</h1>
+            <p>Aprenda a separar seus resíduos corretamente e ajude a cuidar da nossa cidade. Cada pequena ação faz uma grande diferença no meio ambiente!</p>
+        </section>
+
+        <section class="video-section">
+            <h2>Aprenda com quem entende 🎬</h2>
+            <div class="video-wrapper">
+                <iframe id="edu-video" width="100%" height="450" src="https://www.youtube.com/embed/V9Z1kLqM8B4" title="Como separar o lixo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p class="video-caption">Assista ao vídeo acima para entender o ciclo da reciclagem.</p>
+        </section>
+
+        <section class="info-section">
+            <h2>Como separar os materiais?</h2>
+            <p>Clique nos cards abaixo para ver detalhes sobre o que vai em cada lixeira.</p>
+            
+            <div class="cards-grid">
+                <div class="card" onclick="toggleCard(this)">
+                    <div class="card-header plastic">🔴 Plástico</div>
+                    <div class="card-body">
+                        <p><strong>Sim:</strong> Garrafas PET, potes, tampas, embalagens de higiene e limpeza, copos descartáveis.</p>
+                        <p><strong>Não:</strong> Espuma, acrílico, cabos de panela.</p>
+                    </div>
+                </div>
+
+                <div class="card" onclick="toggleCard(this)">
+                    <div class="card-header paper">🔵 Papel</div>
+                    <div class="card-body">
+                        <p><strong>Sim:</strong> Jornais, revistas, caixas de papelão, papel sulfite, panfletos.</p>
+                        <p><strong>Não:</strong> Papel higiênico, guardanapos sujos, papel metalizado, fitas adesivas.</p>
+                    </div>
+                </div>
+
+                <div class="card" onclick="toggleCard(this)">
+                    <div class="card-header glass">🟢 Vidro</div>
+                    <div class="card-body">
+                        <p><strong>Sim:</strong> Garrafas, copos, frascos de perfume, cacos (embalados em jornal para segurança).</p>
+                        <p><strong>Não:</strong> Espelhos, lâmpadas, óculos, cerâmica.</p>
+                    </div>
+                </div>
+
+                <div class="card" onclick="toggleCard(this)">
+                    <div class="card-header metal">🟡 Metal</div>
+                    <div class="card-body">
+                        <p><strong>Sim:</strong> Latas de alumínio, latas de conserva, tampinhas, panelas sem cabo, pregos.</p>
+                        <p><strong>Não:</strong> Clipes, esponja de aço, latas com restos de tinta ou produtos tóxicos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-quiz">
+            <h3>Quer testar seus conhecimentos? 🎮</h3>
+            <p>Faça nosso quiz rápido e descubra se você já é um expert da sustentabilidade!</p>
+            <button class="btn-quiz">Jogar Quiz</button>
+        </section>
+    </main>
+
+    <script src="../js/aprendizado.js"></script>
+</body>
+</html>
