@@ -24,7 +24,23 @@ body {
   text-align: center;
   position: relative;
 }
+/* ESTILO PARA O BOTÃO DE SAIR NO MEIO DO QUIZ */
+.link-voltar-meio {
+    display: inline-block;
+    color: #64748B;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+    background-color: #F1F5F9;
+    padding: 6px 14px;
+    border-radius: 12px;
+}
 
+.link-voltar-meio:hover {
+    color: #EF4444; /* Fica vermelho para indicar que está saindo/cancelando o jogo */
+    background-color: #FEE2E2;
+}
 /* ESTILOS DE TEXTO E ÍCONES */
 .icone-gigante { font-size: 5rem; margin-bottom: 16px; animation: flutuar 3s ease-in-out infinite; }
 
@@ -161,3 +177,23 @@ h3 { font-size: 1.4rem; font-weight: 800; margin-bottom: 24px; line-height: 1.4;
 .link-voltar:hover { color: #10B981; text-decoration: underline; }
 
 .escondido { display: none !important; }
+/* RESPONSIVIDADE PARA O QUIZ EM CELULARES */
+@media (max-width: 480px) {
+  .quiz-container {
+    padding: 30px 20px; /* Diminui as bordas brancas para ganhar espaço */
+    border-radius: 24px;
+  }
+  
+  .icone-gigante {
+    font-size: 4rem; /* Ícone um pouco menor */
+  }
+
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.2rem; margin-bottom: 16px; }
+  p { font-size: 0.95rem; }
+
+  .btn-opcao, .btn-primario, .btn-secundario {
+    padding: 12px 16px; /* Botões levemente menores */
+    font-size: 1rem;
+  }
+}
